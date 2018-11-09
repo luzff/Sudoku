@@ -177,7 +177,7 @@ def solve(problem):
 
 #Now let us run a test for debugging.
 if __name__=='__main__':
-    print('Sudoku solver.\nLuZiffer 2016, GPLv3\n') #Greet the user
+    print('Sudoku solver.\nlffr 2018, GPLv3\n') #Credits
     
     #Show the initial problem.
     print("Problem:")
