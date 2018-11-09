@@ -1,43 +1,25 @@
-#! /usr/bin/python3
-
-#Python sudoku solver using a backtracking algorithm.
-
-# Author:    LuZiffer
-# Copyright: GPLv3, 2016 
-
-#This script can be found online on GitHub:
-# https://github.com/LuZiffer/Sudoku-Solver 
-
+# 
+# Luca Lenz - 2018 GPLv3  
+# 
+# This script can be found online. Check out my github page.
+# https://github.com/luzff/Sudoku
 
 #We will pick a random solutions if multiple exist
 from random import randint
 
 #Example sudoku problem.
-#example = [
-#    1,2,3, 4,5,6, 7,8,9, 
-#    4,5,6, 7,8,9, 1,2,3, 
-#    7,8,9, 1,2,3, 4,5,6, 
-#
-#    2,3,1, 5,4,7, 6,9,8, 
-#    5,4,7, 6,9,8, 3,1,2, 
-#    6,9,8, 2,3,1, 5,4,7, 
-#
-#    0,0,0, 0,0,0, 0,0,0, 
-#    0,0,0, 0,0,0, 0,0,0, 
-#    8,6,4, 0,0,0, 0,0,0, 
-#]
 example = [
-	1,2,0, 4,5,6, 7,8,9,
-	0,0,3, 0,0,0, 0,0,0,
-	0,0,0, 0,0,0, 0,0,0,
+    1,2,3, 4,5,6, 7,8,9, 
+    4,5,6, 7,8,9, 1,2,3, 
+    7,8,9, 1,2,3, 4,5,6, 
 
-	0,0,0, 0,0,0, 0,0,0,
-	0,0,0, 0,0,0, 0,0,0,
-	0,0,0, 0,0,0, 0,0,0,
+    2,3,1, 5,4,7, 6,9,8, 
+    5,4,7, 6,9,8, 3,1,2, 
+    6,9,8, 2,3,1, 5,4,7, 
 
-	0,0,0, 0,0,0, 0,0,0,
-	0,0,0, 0,0,0, 0,0,0,
-	0,0,0, 0,0,0, 0,0,0
+    0,0,0, 0,0,0, 0,0,0, 
+    0,0,0, 0,0,0, 0,0,0, 
+    8,6,4, 0,0,0, 0,0,0, 
 ]
 
 
@@ -86,7 +68,7 @@ def sudoku_empty (problem):
 def print_sudoku (sudoku):
     s = ""
     
-    if sudoku_empty (sudoku):
+    if sudoku_empty(sudoku):
         s = " -/- "
     else:
         for i in range (0,81):
