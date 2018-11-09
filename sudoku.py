@@ -1,8 +1,15 @@
-# 
+# ==========================================================
+# Soduko Solver 
+# Very small, clean and easy to use sudoku solver running
+# on backtracking algorithm and written in Python 3.
+# Caveat: This solver will find ALL solutions. Thus it is
+# very slow for sparsely given sudoku problems.  
+# ==========================================================
 # Luca Lenz - 2018 GPLv3  
 # 
 # This script can be found online. Check out my github page.
 # https://github.com/luzff/Sudoku
+# ==========================================================
 
 #We will pick a random solutions if multiple exist
 from random import randint
@@ -184,7 +191,7 @@ if __name__=='__main__':
     #Print the number of solutions found 
     print ("There are "+str( len(solutions) ) + " solutions. Let's see one.")
     
-    #Now print some specific random one
+    #Now print some random one
     index = randint(0, len(solutions)-1)
     print ("Printing the soduku number " + str(index+1)+':')
     print_sudoku( solutions[index] )
